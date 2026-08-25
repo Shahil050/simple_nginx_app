@@ -34,3 +34,18 @@ spec:
       port: 80
       targetPort: 8080
   type: ClusterIP
+
+
+---
+
+apiVersion: router.openshift.io/v1
+kind: Route
+metadata:
+  name: nginx
+
+spec:
+  to:
+    kind: Service
+    name: nginx
+  port:
+    targetPort: 80 # tells the outer route to match our Service entry port 80
