@@ -48,6 +48,5 @@ spec:
     kind: Service
     name: nginx
   port:
-    Port: 8080
     targetPort: 8080 # tells the outer route to match our Service entry port 80
     # this is external,  if we set it to 80 then inside service we have to change port to 80 as well
